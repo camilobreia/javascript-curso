@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(36, 1, 1);
+            color: white;
+            font: normal 18pt Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] // número 1 indica o 1º parágrafo do body
+        p1.style.color = 'blue' // altera a cor do 2º parágrafo pelo script
+        document.write('Está escrito assim: ' + p1.innerText + '</br>') // repete o que está escrito no 2º parágrafo
+        document.write('Está escrito em HTML assim: ' + p1.innerHTML) // repete o que está escrito com formatação
+
+        var corpo = window.document.body
+        corpo.style.background = 'black' // altera a cor do background
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'yellow'
+
+        
+    
+
+    </script>
+</body>
+</html>

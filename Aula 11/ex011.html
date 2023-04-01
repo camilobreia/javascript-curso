@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Informe sua nacionalidade:</h1>
+    <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="OK" onclick="informar()">
+    <div id="resultado"></div>
+
+    <script>
+        function informar(){
+            var nac = document.querySelector('input#txtnac').value.toLowerCase()
+            var res = document.querySelector('div#resultado')
+            res.innerHTML = '<p>Vivendo em <strong>' + nac.toUpperCase() + '</strong></p>'
+            if (nac == 'brasil'){
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+    
+</body>
+</html>
